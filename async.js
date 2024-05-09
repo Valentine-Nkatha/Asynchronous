@@ -1,12 +1,14 @@
 //Write an asynchronous function that accepts a message string
 // and a delay time in milliseconds. The function should log the
-// message to the console after the specified delay time.
-
+// messa//Write an asynchronous function that accepts a message string
+// and a delay time in milliseconds. The function should log the
+// message to the console after the specified delay time
  async function logMessage(message,delayTime){
-    await delayTime(delayTime);
+    await new Promise(resolve=>
+        setTimeout(resolve,delayTime))
     console.log(message);
  }
-setTimeout(logMessage,2000)
+
 logMessage("Wishes",2000)
 
 
